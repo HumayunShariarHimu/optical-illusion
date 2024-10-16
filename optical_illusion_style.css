@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to right,black,white);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  --size: 50vmin;
+  width: var(--size);
+  height: var(--size);
+  background-color: #444;
+  animation: animate 4s ease-in-out infinite alternate;
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: calc(100vw  - var(--size));
+  }
+}
